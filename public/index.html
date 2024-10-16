@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>what beats rock</title>
+  </head>
+  <body>
+    <header>
+      <a href="">sign in</a>
+    </header>
+    <main>
+      <div class="guess">
+        <p class="textL">what beats</p>
+        <p class="textXL currentGuess">rock</p>
+        <p class="emoji">🪨</p>
+
+        <input
+          class="textMS"
+          type="text"
+          name="guess"
+          id="guess"
+          placeholder="Absolutely anything"
+        />
+        <button class="textMS" id="go">Go</button>
+      </div>
+
+      <div class="results">
+        <p class="textL currentGuess">`${guessArray[1]}`</p>
+        <p class="textXL success">beats</p>
+        <p class="textL" id="previousGuess">`${guessArray[2]}`</p>
+     <div class="flex">
+        <p class="emoji"></p>
+        <span class="center"><p class="emojiS">🤜</p></span>
+        <p class="emoji">🪨</p>
+        <p class="reasoning" id="explanation"</p>
+     </div>
+
+        <button class="textMS" id="next">next</button>
+      </div>
+
+      <p class="p1">score: <span id="score">0</span></p>
+      <p class ="hideAtTheBeginning" class="p1">already guessed:</p>
+      <p id="pastGuesses" class ="hideAtTheBeginning" >rock</p>
+    </main>
+
+    <footer class="p2">
+      <p>follow the creators TheCodingCrew</p>
+      <p>join the community on Patreon 💬</p>
+      <p class="textS">powered by donations</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
