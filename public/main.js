@@ -9,7 +9,7 @@ const pastGuessesParagraph = document.getElementById("pastGuesses")
 const hideAtTheBeginning = document.querySelectorAll(".hideAtTheBeginning")
 const scoreSpan = document.getElementById("score")
 const explanationParagraph = document.getElementById("explanation")
-
+const textXL = document.getElementById("success")
 
 let guessArray = ["rock"]
 
@@ -41,9 +41,10 @@ async function submitGuess(){
        
         // lose
         if (data.winner.toLowerCase() != userGuess){
-            alert("YOU LOSE... haha")
-            return;
-        }
+            alert("YOU LOSE... haha");
+            success.innerText = "did not beat"
+            return;}
+        
         guessArray.unshift(userGuess)
         //erase text box
         guessTextBox.value = ""
@@ -52,7 +53,7 @@ async function submitGuess(){
         for(let i=0; i < currentGuessParagraphs.length; i++) {
             currentGuessParagraphs[i].innerText = guessArray[0]
         }
-        previousGuessParagraph.innerText = guessArray[1]
+        previousGuessParagraph.innerText = `${guessArray[1]}`
         pastGuessesParagraph.innerText = `${guessArray[0]} 🤜 ${pastGuessesParagraph.innerText}`
         //hide at the beginning
         for(let i=0; i < hideAtTheBeginning.length; i++) {
