@@ -51,12 +51,6 @@ async function submitGuess() {
     previousGuessParagraph.innerText = guessArray[1];
     pastGuessesParagraph.innerText = `${guessArray[0]} 🤜 ${pastGuessesParagraph.innerText}`;
 
-    // lose
-    if (data.winner.toLowerCase() != userGuess) {
-      success.innerText = "did not beat";
-      looseDiv.style.display = "block";
-    }
-
     //change paragraphs
     console.log(currentGuessParagraphs);
     for (let i = 0; i < currentGuessParagraphs.length; i++) {
@@ -66,6 +60,13 @@ async function submitGuess() {
     for (let i = 0; i < hideAtTheBeginning.length; i++) {
       hideAtTheBeginning[i].style.display = "block";
     }
+
+    // lose
+    if (data.winner.toLowerCase() != userGuess) {
+      success.innerText = "did not beat";
+      loseDiv.style.display = "block";
+    }
+
     //update score
     scoreSpan.innerText = guessArray.length - 1;
   }
