@@ -64,7 +64,7 @@ async function submitGuess() {
     // lose
     if (data.winner.toLowerCase() != userGuess) {
       success.innerText = "did not beat";
-      loseDiv.style.display = "block";
+      restartButton.style.display = "block";
       nextButton.style.display = "none";
     }
 
