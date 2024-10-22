@@ -11,6 +11,8 @@ const scoreSpan = document.getElementById("score");
 const explanationParagraph = document.getElementById("explanation");
 const chat = document.getElementById("chatOutput");
 const textXL = document.getElementById("success");
+const looseDiv = document.getElementById("loose");
+const restartButton = document.getElementById("restart");
 
 let guessArray = ["rock"];
 
@@ -30,8 +32,6 @@ async function submitGuess() {
 
     // const explanationParagraph =
 
-    
-
     const data = await response.json();
 
     console.log(data);
@@ -49,14 +49,14 @@ async function submitGuess() {
     guessTextBox.value = "";
 
     previousGuessParagraph.innerText = guessArray[1];
-    pastGuessesParagraph.innerText = `${guessArray[0]} 🤜 ${pastGuessesParagraph.innerText}`
+    pastGuessesParagraph.innerText = `${guessArray[0]} 🤜 ${pastGuessesParagraph.innerText}`;
 
     // lose
     if (data.winner.toLowerCase() != userGuess) {
       success.innerText = "did not beat";
-      return;
+      looseDiv.style.display = "block";
     }
-   
+
     //change paragraphs
     console.log(currentGuessParagraphs);
     for (let i = 0; i < currentGuessParagraphs.length; i++) {
@@ -90,4 +90,8 @@ guessTextBox.addEventListener("keypress", () => {
   } else {
     goButton.disabled = true;
   }
+});
+
+restartButton.addEventListener("click", () => {
+  location.reload();
 });

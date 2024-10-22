@@ -1,119 +1,117 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Courier New', Courier, monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    
+body {
+  font-family: "Courier New", Courier, monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-main{
-    height: 4000px;
+main {
+  height: 4000px;
 }
 
-.textXL{
-    font-size: 5rem;
+.textXL {
+  font-size: 5rem;
 }
 
-.textL{
-    font-size: 3rem;
-
+.textL {
+  font-size: 3rem;
 }
 
-.emoji{
-    font-size: 12rem;
+.emoji {
+  font-size: 12rem;
 }
 
-.emojiS{
-    font-size: 4rem;
+.emojiS {
+  font-size: 4rem;
 }
 
-.textMS{
-    font-size: 1.1rem;
+.textMS {
+  font-size: 1.1rem;
 }
 
-.textS{
-    font-size: 0.85rem;
+.textS {
+  font-size: 0.85rem;
 }
 
-.p1{
-    padding: 0.5rem;
+.p1 {
+  padding: 0.5rem;
 }
 
-.p2{
-    padding: 1rem;
+.p2 {
+  padding: 1rem;
 }
-.p3{
-    padding: 2rem;
+.p3 {
+  padding: 2rem;
 }
-.p4{
-    padding: 4rem;
-}
-
-.success{
-    color: lightgreen;
+.p4 {
+  padding: 4rem;
 }
 
-.failure{
-    color: red;
+.success {
+  color: lightgreen;
 }
 
-.results{
-    display: none;
+.failure {
+  color: red;
 }
 
-.guess{
-    display: block;
+.results {
+  display: none;
 }
 
-.hideAtTheBeginning{
-    display: none;
+.guess {
+  display: block;
 }
 
-.flex{
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+.hideAtTheBeginning {
+  display: none;
 }
 
-.center{
-    display: flex;
-    align-self: center;
+.testing {
+  display: none;
 }
 
-input{
-    padding: 0.8rem;
-    border-color: #aaa;
-    border-radius: 5px;
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-button{
-    padding: 0.8rem;
-    background-color: lightgreen;
-    border-radius: 5px;
-    border-color: #aaa;
-    
-    
+.center {
+  display: flex;
+  align-self: center;
 }
 
-
-
-main{
-    margin-bottom: auto;
-    margin-top: 20vh;
-    text-align: center;
-    /* height: 100vh; */
+input {
+  padding: 0.8rem;
+  border-color: #aaa;
+  border-radius: 5px;
 }
 
-footer{
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    background-color: white;
+button {
+  padding: 0.8rem;
+  background-color: lightgreen;
+  border-radius: 5px;
+  border-color: #aaa;
+}
+
+main {
+  margin-bottom: auto;
+  margin-top: 20vh;
+  text-align: center;
+  /* height: 100vh; */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: white;
 }
