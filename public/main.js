@@ -11,7 +11,7 @@ const scoreSpan = document.getElementById("score");
 const explanationParagraph = document.getElementById("explanation");
 const chat = document.getElementById("chatOutput");
 const textXL = document.getElementById("success");
-const looseDiv = document.getElementById("loose");
+const loseDiv = document.querySelector("lose");
 const restartButton = document.getElementById("restart");
 
 let guessArray = ["rock"];
@@ -65,6 +65,7 @@ async function submitGuess() {
     if (data.winner.toLowerCase() != userGuess) {
       success.innerText = "did not beat";
       loseDiv.style.display = "block";
+      nextButton.style.display = "none";
     }
 
     //update score
