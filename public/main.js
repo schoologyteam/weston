@@ -69,10 +69,10 @@ async function submitGuess() {
       restartButton.style.display = "block";
       nextButton.style.display = "none";
       pastGuessesParagraph.innerText = `${guessArray[0]} ☠️ ${pastGuessesParagraph.innerText}`
-
+    }
     //update score
     scoreSpan.innerText = guessArray.length - 1;
-  }
+  
 }}
 
 goButton.addEventListener("click", () => {
