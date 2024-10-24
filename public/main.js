@@ -49,8 +49,10 @@ async function submitGuess() {
     guessTextBox.value = "";
 
     previousGuessParagraph.innerText = guessArray[1];
+    
+    if(data.winner.toLowerCase() === userGuess) {
     pastGuessesParagraph.innerText = `${guessArray[0]} 🤜 ${pastGuessesParagraph.innerText}`;
-
+    }
     //change paragraphs
     console.log(currentGuessParagraphs);
     for (let i = 0; i < currentGuessParagraphs.length; i++) {
@@ -66,12 +68,12 @@ async function submitGuess() {
       success.innerText = "did not beat";
       restartButton.style.display = "block";
       nextButton.style.display = "none";
-    }
+      pastGuessesParagraph.innerText = `${guessArray[0]} ☠️ ${pastGuessesParagraph.innerText}`
 
     //update score
     scoreSpan.innerText = guessArray.length - 1;
   }
-}
+}}
 
 goButton.addEventListener("click", () => {
   submitGuess();
